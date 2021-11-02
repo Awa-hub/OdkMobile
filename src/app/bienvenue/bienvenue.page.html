@@ -1,0 +1,62 @@
+    <ion-app>
+      <ion-menu side="start" content-id="main-content">
+        <ion-header >
+          <ion-toolbar translucent >
+             <ion-menu-button color="primary">Menu</ion-menu-button>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content>
+          <ion-list>
+            <!-- <ion-item routerLink="/liste" color="primary">
+              <ion-icon name="people-outline" slot="start"></ion-icon>
+              <ion-label >Apprenant</ion-label>
+            </ion-item>
+            <ion-item (click)="Deconnecter()" color="primary">
+              <ion-icon name="log-out-outline" slot="start"></ion-icon>
+              <ion-label>Deconnecter</ion-label>
+            </ion-item> -->
+            <ion-list>
+
+              <ion-button fill="outline" expand="block" routerLink="/liste">
+                <ion-icon name="people-outline"></ion-icon>
+                Liste Apprenant
+              </ion-button>
+  
+            <ion-button fill="outline" expand="block" (click)="Deconnecter()">
+              <ion-icon name="log-out-outline"></ion-icon>
+              Deconnexion
+            </ion-button>
+  
+          </ion-list>
+            
+          </ion-list>
+        </ion-content>
+      </ion-menu>
+  
+      <div class="ion-page" id="main-content">
+        <ion-header>
+          <ion-toolbar color="primary">
+            <ion-buttons slot="start">
+              <ion-menu-button></ion-menu-button>
+            </ion-buttons>
+            <ion-title>Orange Digital Kalason</ion-title>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content class="ion-padding">
+         <h2 class="black"> Bienvenue {{prenom}} {{nom}}</h2>
+         <ion-item>
+            <ion-label>Tu t'es connecter à: </ion-label>
+          <ion-label [(ngModel)]="myDate" >{{myDate | date: 'HH:mm'}}</ion-label>
+          
+        </ion-item>
+        </ion-content>
+        </div>
+    </ion-app>
+  
+    <!-- <script>
+      async function openMenu() {
+        await menuController.open();
+      }
+    </script> -->
+
+
